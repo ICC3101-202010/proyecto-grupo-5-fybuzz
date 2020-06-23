@@ -30,5 +30,6 @@ namespace Entrega3_FyBuZz.CustomArgs
         public List<string> OnQueue { get; set; }
         public int NumberText { get; set; }
         public string VideoSubSource { get; set; }
+        public double PresentTimeText { get; set; }
     }
 }

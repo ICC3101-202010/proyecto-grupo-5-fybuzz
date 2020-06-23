@@ -169,13 +169,21 @@ namespace Entrega3_FyBuZz.Controladores
             int pAge = DateTime.Now.Year - e.BirthdayText.Year;
 
             Profile prof = new Profile(e.ProfileNameText,"..",e.ProfileTypeText,e.EmailText,e.GenderText, pAge);
-            foreach(Profile profile in userDataBase[u].Perfiles)
+            foreach(User user in userDataBase)
             {
-                if (profile.ProfileName == prof.ProfileName || profile.Username == prof.ProfileName)
+                if(user.Username == e.UsernameText)
                 {
-                    prof = profile;
+                    foreach (Profile profile in user.Perfiles)
+                    {
+                        if (profile.ProfileName == prof.ProfileName || profile.Username == prof.ProfileName)
+                        {
+                            prof = profile;
+                        }
+                    }
                 }
+                
             }
+            
             return prof;
         }
         private List<string> OnProfilesChooseProfile_Click2(object sender, ProfileEventArgs e)

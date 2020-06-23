@@ -29,5 +29,6 @@ namespace Entrega3_FyBuZz.CustomArgs
         public int NumberText { get; set; }
         public string PicFile { get; set; }
         public string PicSource {get; set; }
+        public double PresentTimeText { get; set; }
     }
 }

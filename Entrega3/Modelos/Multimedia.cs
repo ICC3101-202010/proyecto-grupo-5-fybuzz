@@ -18,7 +18,7 @@ namespace Modelos
         protected int generalRep;
         protected int profileRep;
         protected double duration;
-        protected double presentTime;
+        protected double presentTime = 0;
         protected string format;
         //--------------------------------------------------------------------------------------------------
 
