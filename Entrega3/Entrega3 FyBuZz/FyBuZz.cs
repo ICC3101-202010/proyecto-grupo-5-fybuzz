@@ -7292,14 +7292,14 @@ namespace Entrega3_FyBuZz
             string[] videoPlaying = PlayVideoVideoPlaying.Text.Split(':');
             string h = windowsMediaPlayer.playState.ToString();
 
-            if (videoPlaying[1] != "" && (wmpVideo.playState.ToString() == "wmppsPlaying" || wmpVideo.playState.ToString() == "wmppsPaused"))
+            if (videoPlaying[0] != "" && (wmpVideo.playState.ToString() == "wmppsPlaying" || wmpVideo.playState.ToString() == "wmppsPaused"))
             {
 
                 double presentTimeVideo = wmpVideo.Ctlcontrols.currentPosition;
 
                 setPresentTimeVideo(videoPlaying[0], videoPlaying[1], videoPlaying[2], presentTimeVideo);
             }
-            else if (videoPlaying[0] != "" && (windowsMediaPlayer.playState.ToString() == "wmppsPlaying" || windowsMediaPlayer.playState.ToString() == "wmppsPaused"))
+            else if (songPlaying[0] != "" && (windowsMediaPlayer.playState.ToString() == "wmppsPlaying" || windowsMediaPlayer.playState.ToString() == "wmppsPaused"))
             {
                 double presentTime = windowsMediaPlayer.Ctlcontrols.currentPosition;
 
