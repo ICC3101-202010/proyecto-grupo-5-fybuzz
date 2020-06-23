@@ -28,6 +28,7 @@ namespace Entrega3_FyBuZz.Controladores
             this.fyBuzz.PlaysVideoRateButton_Clicked += RateVideo;
             this.fyBuzz.SkipOrPreviousVideoButton_Clicked += OnSkipOrPreviousVideoButton_Clicked;
             this.fyBuzz.LikedVideo_Done += LikeVideo;
+            this.fyBuzz.settedPresentTimeVideo += SetPresentTimeVideo;
         }
 
         public void Initialize()
@@ -189,6 +190,30 @@ namespace Entrega3_FyBuZz.Controladores
             }
             database.Save_Videos(videoDataBase);
             return result;
+        }
+        private string SetPresentTimeVideo(object sender, VideoEventArgs e)
+        {
+            string description = null;
+            double presentTime = e.PresentTimeText;
+
+            foreach (Video video in videoDataBase)
+            {
+                if (e.NameText != null && e.ActorsText != null && e.DirectorsText != null && e.NameText.Contains(video.Name) && e.ActorsText.Contains(video.Actors) && e.DirectorsText.Contains(video.Directors) )
+                {
+                    if (presentTime != 0)
+                    {
+                        
+                        video.PresentTime = presentTime;
+                        break;
+                    }   
+                }
+                else
+                {
+                    video.PresentTime = 0;
+                }
+            }
+            database.Save_Videos(videoDataBase);
+            return description;
         }
     }
 }

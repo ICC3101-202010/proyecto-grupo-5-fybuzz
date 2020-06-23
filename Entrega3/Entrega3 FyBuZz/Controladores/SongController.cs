@@ -30,6 +30,7 @@ namespace Entrega3_FyBuZz.Controladores
             this.fyBuZz.SkipOrPreviousSongButton_Clicked += OnSkipOrPreviousSongButton_Clicked;
             this.fyBuZz.LikedSong_Done += LikeSong;
             this.fyBuZz.ReturnSongInfo_Did += ReturnSongInfo2;
+            this.fyBuZz.settedPresentTime += SetPresentTime;
         }
 
         public void Initialize()
@@ -211,6 +212,32 @@ namespace Entrega3_FyBuZz.Controladores
             dataBase.Save_Songs(songDatabase);
             return result;
         } 
+        private string SetPresentTime(object sender, SongEventArgs e)
+        {
+            string description = null;
+            double presentTime = e.PresentTimeText;
+
+            foreach(Song song in songDatabase)
+            {
+                if(e.NameText != null && e.ArtistText != null && e.NameText.Contains(song.Name) && e.ArtistText.Contains(song.Artist))
+                {
+                    if(presentTime != 0)
+                    {
+                        
+                        song.PresentTime = presentTime;
+                        break;
+                        
+                    }
+   
+                }
+                else
+                {
+                    song.PresentTime = 0;
+                }
+            }
+            dataBase.Save_Songs(songDatabase);
+            return description;
+        }
 
     }
 }
