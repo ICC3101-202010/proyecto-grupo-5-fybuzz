@@ -1199,6 +1199,9 @@ namespace Entrega3_FyBuZz
         }
         private void SearchSelectMultButton_Click_1(object sender, EventArgs e)
         {
+            wmpVideo.Ctlcontrols.stop();
+            windowsMediaPlayer.Ctlcontrols.stop();
+            soundPlayer.Stop();
             PlayerMultPanel.Visible = true;
             TimerWav.Stop();
             ticks = 0;
@@ -1329,6 +1332,7 @@ namespace Entrega3_FyBuZz
             }
             else if (multimediaType.Contains("PlayList Name:") == true)
             {
+                
                 isInPlaylist = true;
                 string result = SearchSearchResultsDomainUp.Text;
                 string plName = "";
@@ -1409,6 +1413,7 @@ namespace Entrega3_FyBuZz
 
             else if (multimediaType.Contains("Video:") == true)
             {
+                PlayerMultPanel.Visible = false;
                 PlayVideoVideoPlaying.Clear();
                 string[] MultimediaType = SearchSearchResultsDomainUp.Text.Split(':');
                 List<string> videoMVCInfo = GetVideoButton(MultimediaType[1], MultimediaType[3], MultimediaType[5]);
@@ -1692,6 +1697,7 @@ namespace Entrega3_FyBuZz
         }
         private void SearchViewUserButton_Click_1(object sender, EventArgs e)
         {
+            PlayerMultPanel.Visible = false;
             string[] searcheduser = SearchSearchResultsDomainUp.Text.Split(':');
             List<string> userGetter = OnLogInLogInButton_Clicked2(searcheduser[2]);
             if (SearchSearchResultsDomainUp.Text.Contains("User: "))
@@ -2161,6 +2167,11 @@ namespace Entrega3_FyBuZz
 
         private void PlaySongAddQueueButton_Click(object sender, EventArgs e)
         {
+            
+
+        }
+        private void PlaySongAddQueueButton_Click_1(object sender, EventArgs e)
+        {
             string[] searchedMult = PlaySongSongPlaying.Text.Split(':');
             if (SearchSearchResultsDomainUp.Text.Contains("Song: ") == false)
             {
@@ -2174,10 +2185,13 @@ namespace Entrega3_FyBuZz
                 Thread.Sleep(1000);
                 PlaySongMessageTextBox.Clear();
             }
-
         }
 
         private void PlaySongAddToPlaylistButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void PlaySongAddToPlaylistButton_Click_1(object sender, EventArgs e)
         {
             PlaySongMessageTextBox.Clear();
             PlaySongChoosePlsDomainUp.ResetText();
@@ -2198,6 +2212,10 @@ namespace Entrega3_FyBuZz
         }
         private void PlaySongChoosePlsButton_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void PlaySongChoosePlsButton_Click_1(object sender, EventArgs e)
+        {
             PlaySongMessageTextBox.Clear();
             List<Song> songDataBase = new List<Song>();
             string result = PlaySongSongPlaying.Text;
@@ -2206,7 +2224,7 @@ namespace Entrega3_FyBuZz
             songDataBase = OnSearchSongButton_Click();
             Profile profile = OnProfilesChooseProfile_Click(ProfileDomainUp.Text, UserLogInTextBox.Text, PasswordLogInTextBox.Text);
             PlaySongChoosePlsButton_Click(songDataBase, profile, result, choosenPl, searchedPlaylistName);
-         
+
             int cont = 0;
             if (PlaySongChoosePlsDomainUp.SelectedIndex != -1)
             {
@@ -2294,6 +2312,7 @@ namespace Entrega3_FyBuZz
 
             }
         }
+        
         private void PlaySongPreviousSongButton_Click(object sender, EventArgs e)
         {
             if (isInPlaylist)
@@ -2456,6 +2475,11 @@ namespace Entrega3_FyBuZz
         //!SHOW SONG LYRICS
         private void PlaySongShowLyrics_Click(object sender, EventArgs e)
         {
+            
+
+        }
+        private void PlaySongShowLyrics_Click_1(object sender, EventArgs e)
+        {
             PlaySongDisplayLyrics.Visible = false;
             PlaySongDisplayLyrics.Clear();
             string[] searchedSong = PlaySongSongPlaying.Text.Split(':');
@@ -2483,7 +2507,6 @@ namespace Entrega3_FyBuZz
                 Thread.Sleep(2000);
                 PlaySongMessageTextBox.Clear();
             }
-
         }
         //Rate Song
         private void PlaysSongRateButton_Click(object sender, EventArgs e)
@@ -3119,6 +3142,7 @@ namespace Entrega3_FyBuZz
 
         private void InfoMediaButton_Click(object sender, EventArgs e)
         {
+            PlaySongDisplayLyrics.Clear();
             SearchDisplayMoreMultimediaInfo.Clear();
             SearchDisplayMoreMultimediaInfo.Visible = true;
             string[] infoMult = SearchSearchResultsDomainUp.Text.Split(':');
@@ -3130,7 +3154,7 @@ namespace Entrega3_FyBuZz
                                                                "Lyrics File: ", "Song File: ", "Ranking: ","Name: "};
             foreach (string info in infoMultimedia)
             {
-                SearchDisplayMoreMultimediaInfo.AppendText(information[n] + info + "\r\n");
+                PlaySongDisplayLyrics.AppendText(information[n] + info + "\r\n");
                 n++;
             }
         }
@@ -5549,6 +5573,7 @@ namespace Entrega3_FyBuZz
         }
         private void DisplayPlaylistPrefPlaylistSong_Click(object sender, EventArgs e)
         {
+            PlayerMultPanel.Visible = true;
             isInPlaylist = true;
             PlayPlaylistMultTypeTextBox.Clear();
             PlayPlaylistMultTypeTextBox.Clear();
@@ -6127,6 +6152,15 @@ namespace Entrega3_FyBuZz
         //---------------------------------------------//
         private void PlaySongShareButton_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void PlaySongShareButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlaySongChooseUserButton_Click(object sender, EventArgs e)
+        {
             int cont = 0;
             Profile profile = OnProfilesChooseProfile_Click(ProfileDomainUp.Text, PasswordLogInTextBox.Text, UserLogInTextBox.Text);
             if (PlaySongChooseUserDomainUp.SelectedIndex != -1)
@@ -6143,29 +6177,28 @@ namespace Entrega3_FyBuZz
             }
             PlaySongChooseUserDomainUp.Visible = true;
             PlaySongChooseUserButton.Visible = true;
-     
+
             User user = OnLoginButtonClicked(UserLogInTextBox.Text, PasswordLogInTextBox.Text);
-            foreach(String followedUser in user.FollowingList)
+            foreach (String followedUser in user.FollowingList)
             {
                 PlaySongChooseUserDomainUp.Items.Add(followedUser);
             }
-        }
 
-        private void PlaySongChooseUserButton_Click(object sender, EventArgs e)
+        }
+        private void PlaySongChooseUserButton_Click_1(object sender, EventArgs e)
         {
             string[] songPlaying = PlaySongSongPlaying.Text.Split(':');
 
-            List<string> songInfo = ReturnInfoSong2(songPlaying[0],songPlaying[1]);
+            List<string> songInfo = ReturnInfoSong2(songPlaying[0], songPlaying[1]);
             string songFile = songInfo[7];
             List<string> sharedMult = new List<string>() { UserLogInTextBox.Text + "/" + songFile };
-            string result = SharedMultSet(PlaySongChooseUserDomainUp.Text,  sharedMult);
+            string result = SharedMultSet(PlaySongChooseUserDomainUp.Text, sharedMult);
             if (result != null)
             {
                 PlaySongMessageTextBox.AppendText(result);
             }
             Thread.Sleep(1000);
             PlaySongMessageTextBox.Clear();
-
         }
         //--------Video-----------
         private void PlayVideoShareButton_Click(object sender, EventArgs e)
@@ -6553,7 +6586,7 @@ namespace Entrega3_FyBuZz
                 DisplayPlaylistPrefPlaylistVideo.Visible = true;
                 PersPlaylistVideoLabel.Visible = true;
             }
-            else
+            else if(DisplayStartPersPlaylistPanel.Visible == false)
             {
                 DisplayStartErrorPanel.Visible = true;
                 DisplayStartErrorMessage.Visible = true;
@@ -6604,7 +6637,7 @@ namespace Entrega3_FyBuZz
                 DisplayPlaylistsFavoritePlaylistVideos.Visible = true;
                 FavPlaylistVideoLabel.Visible = true;
             }
-            else
+            else if(DisplayStartFavPlaylistPanel.Visible == false)
             {
                 DisplayStartErrorPanel.Visible = true;
                 DisplayStartErrorMessage.Visible = true;
@@ -6924,8 +6957,5 @@ namespace Entrega3_FyBuZz
         {
 
         }
-
-
-        
     }
 }
