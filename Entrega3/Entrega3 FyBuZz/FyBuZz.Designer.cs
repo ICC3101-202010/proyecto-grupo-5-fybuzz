@@ -441,17 +441,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SideMenuPanel = new System.Windows.Forms.Panel();
             this.SideButtonAboutUs = new System.Windows.Forms.Button();
-            this.AboutUsInfoTextPanel = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.AdminMenuButton = new System.Windows.Forms.Button();
             this.AccountSettingsButton = new System.Windows.Forms.Button();
             this.CreateOptionsPanel = new System.Windows.Forms.Panel();
@@ -560,6 +549,19 @@
             this.MaximizeFyBuZzIconBox = new FontAwesome.Sharp.IconPictureBox();
             this.MinimizeFyBuZzIconBox = new FontAwesome.Sharp.IconPictureBox();
             this.CloseFyBuZzIconBox = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.AboutUsInfoTextPanel = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.DisplayStartCreateErrorTextBox = new System.Windows.Forms.TextBox();
             this.ProfilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AdminMenuPanel.SuspendLayout();
@@ -629,7 +631,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.WelcomeLogo)).BeginInit();
             this.WelcomePanel.SuspendLayout();
             this.SideMenuPanel.SuspendLayout();
-            this.AboutUsInfoTextPanel.SuspendLayout();
             this.CreateOptionsPanel.SuspendLayout();
             this.PlayListsOptionsPanel.SuspendLayout();
             this.LogoFyBuzz.SuspendLayout();
@@ -651,6 +652,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaximizeFyBuZzIconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeFyBuZzIconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseFyBuZzIconBox)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.AboutUsInfoTextPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProfilePanel
@@ -855,11 +858,11 @@
             this.AdminMenuPanel.Controls.Add(this.AdminMenuEraseUserButtonFeo);
             this.AdminMenuPanel.Controls.Add(this.AdminMenuLabel);
             this.AdminMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.AdminMenuPanel.Location = new System.Drawing.Point(250, 29);
             this.AdminMenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminMenuPanel.MinimumSize = new System.Drawing.Size(758, 577);
             this.AdminMenuPanel.Name = "AdminMenuPanel";
-            this.AdminMenuPanel.Size = new System.Drawing.Size(1024, 768);
+            this.AdminMenuPanel.Size = new System.Drawing.Size(774, 624);
             this.AdminMenuPanel.TabIndex = 9;
             // 
             // AdminMenuBanUser
@@ -873,7 +876,7 @@
             this.AdminMenuBanUser.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
             this.AdminMenuBanUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(188)))), ((int)(((byte)(45)))));
             this.AdminMenuBanUser.IconSize = 50;
-            this.AdminMenuBanUser.Location = new System.Drawing.Point(439, 608);
+            this.AdminMenuBanUser.Location = new System.Drawing.Point(314, 536);
             this.AdminMenuBanUser.Name = "AdminMenuBanUser";
             this.AdminMenuBanUser.Rotation = 0D;
             this.AdminMenuBanUser.Size = new System.Drawing.Size(216, 68);
@@ -894,7 +897,7 @@
             this.AdminMenuBanUserButton.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
             this.AdminMenuBanUserButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(188)))), ((int)(((byte)(45)))));
             this.AdminMenuBanUserButton.IconSize = 50;
-            this.AdminMenuBanUserButton.Location = new System.Drawing.Point(439, 534);
+            this.AdminMenuBanUserButton.Location = new System.Drawing.Point(314, 462);
             this.AdminMenuBanUserButton.Name = "AdminMenuBanUserButton";
             this.AdminMenuBanUserButton.Rotation = 0D;
             this.AdminMenuBanUserButton.Size = new System.Drawing.Size(216, 68);
@@ -915,7 +918,7 @@
             this.AdminMenuEraseUserButton.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.AdminMenuEraseUserButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(188)))), ((int)(((byte)(45)))));
             this.AdminMenuEraseUserButton.IconSize = 50;
-            this.AdminMenuEraseUserButton.Location = new System.Drawing.Point(438, 461);
+            this.AdminMenuEraseUserButton.Location = new System.Drawing.Point(313, 389);
             this.AdminMenuEraseUserButton.Name = "AdminMenuEraseUserButton";
             this.AdminMenuEraseUserButton.Rotation = 0D;
             this.AdminMenuEraseUserButton.Size = new System.Drawing.Size(216, 68);
@@ -937,7 +940,7 @@
             this.AdminMenuGoBackButton.IconChar = FontAwesome.Sharp.IconChar.Reply;
             this.AdminMenuGoBackButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(188)))), ((int)(((byte)(45)))));
             this.AdminMenuGoBackButton.IconSize = 50;
-            this.AdminMenuGoBackButton.Location = new System.Drawing.Point(155, 116);
+            this.AdminMenuGoBackButton.Location = new System.Drawing.Point(30, 44);
             this.AdminMenuGoBackButton.Name = "AdminMenuGoBackButton";
             this.AdminMenuGoBackButton.Rotation = 0D;
             this.AdminMenuGoBackButton.Size = new System.Drawing.Size(63, 52);
@@ -952,7 +955,7 @@
             this.AdminMenuMessageBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(39)))));
             this.AdminMenuMessageBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AdminMenuMessageBox.ForeColor = System.Drawing.Color.White;
-            this.AdminMenuMessageBox.Location = new System.Drawing.Point(404, 452);
+            this.AdminMenuMessageBox.Location = new System.Drawing.Point(280, 608);
             this.AdminMenuMessageBox.Name = "AdminMenuMessageBox";
             this.AdminMenuMessageBox.ReadOnly = true;
             this.AdminMenuMessageBox.Size = new System.Drawing.Size(278, 15);
@@ -966,7 +969,7 @@
             this.AdminMenuAllUsers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AdminMenuAllUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminMenuAllUsers.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AdminMenuAllUsers.Location = new System.Drawing.Point(340, 415);
+            this.AdminMenuAllUsers.Location = new System.Drawing.Point(215, 343);
             this.AdminMenuAllUsers.Name = "AdminMenuAllUsers";
             this.AdminMenuAllUsers.ReadOnly = true;
             this.AdminMenuAllUsers.Size = new System.Drawing.Size(402, 27);
@@ -1003,7 +1006,7 @@
             this.AdminMenuWelcomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AdminMenuWelcomeTextBox.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminMenuWelcomeTextBox.ForeColor = System.Drawing.Color.White;
-            this.AdminMenuWelcomeTextBox.Location = new System.Drawing.Point(215, 217);
+            this.AdminMenuWelcomeTextBox.Location = new System.Drawing.Point(90, 145);
             this.AdminMenuWelcomeTextBox.Name = "AdminMenuWelcomeTextBox";
             this.AdminMenuWelcomeTextBox.Size = new System.Drawing.Size(635, 31);
             this.AdminMenuWelcomeTextBox.TabIndex = 6;
@@ -1016,7 +1019,7 @@
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(39)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(460, 254);
+            this.pictureBox4.Location = new System.Drawing.Point(335, 182);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(162, 151);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1026,7 +1029,7 @@
             // AdminMenuBanUserButtonFeo
             // 
             this.AdminMenuBanUserButtonFeo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AdminMenuBanUserButtonFeo.Location = new System.Drawing.Point(719, 645);
+            this.AdminMenuBanUserButtonFeo.Location = new System.Drawing.Point(594, 573);
             this.AdminMenuBanUserButtonFeo.Name = "AdminMenuBanUserButtonFeo";
             this.AdminMenuBanUserButtonFeo.Size = new System.Drawing.Size(88, 16);
             this.AdminMenuBanUserButtonFeo.TabIndex = 2;
@@ -1038,7 +1041,7 @@
             // AdminMenuEraseUserButtonFeo
             // 
             this.AdminMenuEraseUserButtonFeo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AdminMenuEraseUserButtonFeo.Location = new System.Drawing.Point(230, 527);
+            this.AdminMenuEraseUserButtonFeo.Location = new System.Drawing.Point(105, 455);
             this.AdminMenuEraseUserButtonFeo.Name = "AdminMenuEraseUserButtonFeo";
             this.AdminMenuEraseUserButtonFeo.Size = new System.Drawing.Size(84, 19);
             this.AdminMenuEraseUserButtonFeo.TabIndex = 1;
@@ -1053,7 +1056,7 @@
             this.AdminMenuLabel.AutoSize = true;
             this.AdminMenuLabel.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminMenuLabel.ForeColor = System.Drawing.Color.White;
-            this.AdminMenuLabel.Location = new System.Drawing.Point(402, 147);
+            this.AdminMenuLabel.Location = new System.Drawing.Point(277, 75);
             this.AdminMenuLabel.Name = "AdminMenuLabel";
             this.AdminMenuLabel.Size = new System.Drawing.Size(335, 59);
             this.AdminMenuLabel.TabIndex = 0;
@@ -6467,8 +6470,8 @@
             // 
             this.SideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(44)))));
             this.SideMenuPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SideMenuPanel.Controls.Add(this.panel3);
             this.SideMenuPanel.Controls.Add(this.SideButtonAboutUs);
-            this.SideMenuPanel.Controls.Add(this.AboutUsInfoTextPanel);
             this.SideMenuPanel.Controls.Add(this.AdminMenuButton);
             this.SideMenuPanel.Controls.Add(this.AccountSettingsButton);
             this.SideMenuPanel.Controls.Add(this.CreateOptionsPanel);
@@ -6500,127 +6503,6 @@
             this.SideButtonAboutUs.Text = "About Us";
             this.SideButtonAboutUs.UseVisualStyleBackColor = true;
             this.SideButtonAboutUs.Click += new System.EventHandler(this.SideButtonAboutUs_Click);
-            // 
-            // AboutUsInfoTextPanel
-            // 
-            this.AboutUsInfoTextPanel.AutoScroll = true;
-            this.AboutUsInfoTextPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(20)))), ((int)(((byte)(34)))));
-            this.AboutUsInfoTextPanel.Controls.Add(this.label31);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label32);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label33);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label34);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label35);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label36);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label37);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label38);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label39);
-            this.AboutUsInfoTextPanel.Controls.Add(this.label30);
-            this.AboutUsInfoTextPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AboutUsInfoTextPanel.Location = new System.Drawing.Point(0, 585);
-            this.AboutUsInfoTextPanel.Name = "AboutUsInfoTextPanel";
-            this.AboutUsInfoTextPanel.Size = new System.Drawing.Size(246, 179);
-            this.AboutUsInfoTextPanel.TabIndex = 12;
-            this.AboutUsInfoTextPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AboutUsInfoTextPanel_Paint);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(23, 334);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(113, 24);
-            this.label31.TabIndex = 23;
-            this.label31.Text = "Carlos Diaz";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(23, 297);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(151, 24);
-            this.label32.TabIndex = 22;
-            this.label32.Text = "Andres Howard";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(10, 260);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(115, 24);
-            this.label33.TabIndex = 21;
-            this.label33.Text = "Profesores:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(23, 215);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(388, 24);
-            this.label34.TabIndex = 20;
-            this.label34.Text = "FyBuZz Programación orientada a objetos";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.ForeColor = System.Drawing.Color.White;
-            this.label35.Location = new System.Drawing.Point(10, 176);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(96, 24);
-            this.label35.TabIndex = 19;
-            this.label35.Text = "Proyecto:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(23, 125);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(145, 24);
-            this.label36.TabIndex = 18;
-            this.label36.Text = "Jacobo Giraldo";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(23, 92);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(139, 24);
-            this.label37.TabIndex = 17;
-            this.label37.Text = "Matias Leguer";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(23, 63);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(144, 24);
-            this.label38.TabIndex = 16;
-            this.label38.Text = "Diego Pinochet";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(10, 35);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(120, 24);
-            this.label39.TabIndex = 15;
-            this.label39.Text = "Integrantes:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(39, 35);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(0, 24);
-            this.label30.TabIndex = 0;
-            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // AdminMenuButton
             // 
@@ -8309,6 +8191,7 @@
             // TopCloseWindowPanel
             // 
             this.TopCloseWindowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(13)))), ((int)(((byte)(21)))));
+            this.TopCloseWindowPanel.Controls.Add(this.DisplayStartCreateErrorTextBox);
             this.TopCloseWindowPanel.Controls.Add(this.MaximizeFyBuZzIconBox);
             this.TopCloseWindowPanel.Controls.Add(this.MinimizeFyBuZzIconBox);
             this.TopCloseWindowPanel.Controls.Add(this.CloseFyBuZzIconBox);
@@ -8363,12 +8246,152 @@
             this.CloseFyBuZzIconBox.TabStop = false;
             this.CloseFyBuZzIconBox.Click += new System.EventHandler(this.CloseFyBuZzIconBox_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.AboutUsInfoTextPanel);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 731);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(246, 451);
+            this.panel3.TabIndex = 14;
+            // 
+            // AboutUsInfoTextPanel
+            // 
+            this.AboutUsInfoTextPanel.AutoScroll = true;
+            this.AboutUsInfoTextPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(20)))), ((int)(((byte)(34)))));
+            this.AboutUsInfoTextPanel.Controls.Add(this.label31);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label32);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label33);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label34);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label35);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label36);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label37);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label38);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label39);
+            this.AboutUsInfoTextPanel.Controls.Add(this.label30);
+            this.AboutUsInfoTextPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AboutUsInfoTextPanel.Location = new System.Drawing.Point(0, 0);
+            this.AboutUsInfoTextPanel.Name = "AboutUsInfoTextPanel";
+            this.AboutUsInfoTextPanel.Size = new System.Drawing.Size(246, 451);
+            this.AboutUsInfoTextPanel.TabIndex = 13;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(23, 334);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(113, 24);
+            this.label31.TabIndex = 23;
+            this.label31.Text = "Carlos Diaz";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(23, 297);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(151, 24);
+            this.label32.TabIndex = 22;
+            this.label32.Text = "Andres Howard";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(10, 260);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(115, 24);
+            this.label33.TabIndex = 21;
+            this.label33.Text = "Profesores:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(23, 215);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(388, 24);
+            this.label34.TabIndex = 20;
+            this.label34.Text = "FyBuZz Programación orientada a objetos";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(10, 176);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(96, 24);
+            this.label35.TabIndex = 19;
+            this.label35.Text = "Proyecto:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(23, 125);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(145, 24);
+            this.label36.TabIndex = 18;
+            this.label36.Text = "Jacobo Giraldo";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(23, 92);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(139, 24);
+            this.label37.TabIndex = 17;
+            this.label37.Text = "Matias Leguer";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(23, 63);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(144, 24);
+            this.label38.TabIndex = 16;
+            this.label38.Text = "Diego Pinochet";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(10, 35);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(120, 24);
+            this.label39.TabIndex = 15;
+            this.label39.Text = "Integrantes:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(39, 35);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 24);
+            this.label30.TabIndex = 0;
+            // 
+            // DisplayStartCreateErrorTextBox
+            // 
+            this.DisplayStartCreateErrorTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DisplayStartCreateErrorTextBox.BackColor = System.Drawing.Color.Black;
+            this.DisplayStartCreateErrorTextBox.ForeColor = System.Drawing.SystemColors.Menu;
+            this.DisplayStartCreateErrorTextBox.Location = new System.Drawing.Point(31, 3);
+            this.DisplayStartCreateErrorTextBox.Name = "DisplayStartCreateErrorTextBox";
+            this.DisplayStartCreateErrorTextBox.Size = new System.Drawing.Size(412, 22);
+            this.DisplayStartCreateErrorTextBox.TabIndex = 3;
+            this.DisplayStartCreateErrorTextBox.Visible = false;
+            // 
             // FyBuZz
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.WelcomePanel);
+            this.Controls.Add(this.AdminMenuPanel);
             this.Controls.Add(this.DisplayStartPanel);
             this.Controls.Add(this.SearchPanel);
             this.Controls.Add(this.PlayPlaylistPanel);
@@ -8386,7 +8409,6 @@
             this.Controls.Add(this.PlayerMultPanel);
             this.Controls.Add(this.SideMenuPanel);
             this.Controls.Add(this.AddShowPanel);
-            this.Controls.Add(this.AdminMenuPanel);
             this.Controls.Add(this.UserProfileChangeInfoPanel);
             this.Controls.Add(this.RegisterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -8491,8 +8513,6 @@
             this.WelcomePanel.ResumeLayout(false);
             this.WelcomePanel.PerformLayout();
             this.SideMenuPanel.ResumeLayout(false);
-            this.AboutUsInfoTextPanel.ResumeLayout(false);
-            this.AboutUsInfoTextPanel.PerformLayout();
             this.CreateOptionsPanel.ResumeLayout(false);
             this.PlayListsOptionsPanel.ResumeLayout(false);
             this.LogoFyBuzz.ResumeLayout(false);
@@ -8516,9 +8536,13 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.TopCloseWindowPanel.ResumeLayout(false);
+            this.TopCloseWindowPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaximizeFyBuZzIconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeFyBuZzIconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseFyBuZzIconBox)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.AboutUsInfoTextPanel.ResumeLayout(false);
+            this.AboutUsInfoTextPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -8987,17 +9011,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox LogInInvalidCredentialsTetxbox;
         private System.Windows.Forms.Button SideButtonAboutUs;
-        private System.Windows.Forms.Panel AboutUsInfoTextPanel;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel DisplayStartProfileInfoPanel;
         private System.Windows.Forms.Label label24;
         private FontAwesome.Sharp.IconButton ProfileInfoAccountSettingsButton;
@@ -9060,5 +9073,18 @@
         private FontAwesome.Sharp.IconPictureBox MaximizeFyBuZzIconBox;
         private FontAwesome.Sharp.IconPictureBox MinimizeFyBuZzIconBox;
         private FontAwesome.Sharp.IconPictureBox CloseFyBuZzIconBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel AboutUsInfoTextPanel;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox DisplayStartCreateErrorTextBox;
     }
 }
