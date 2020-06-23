@@ -871,19 +871,7 @@ namespace Entrega3_FyBuZz
 
         private void DisplayStartAdminMenuButton_Click(object sender, EventArgs e)
         {
-            List<string> listUser = OnLogInLogInButton_Clicked2(UserLogInTextBox.Text);
-            List<User> userDatabase = OnSearchUserButton_Click();
-            if(listUser[3] == "admin")
-            {
-                foreach(User user in userDatabase)
-                {
-                    if(user.Username != null)
-                    {
-                        AdminMenuAllUsers.Items.Add(user.Username);
-                    }
-                }
-                AdminMenuPanel.BringToFront();
-            }
+            
 
         }
 
@@ -4700,6 +4688,7 @@ namespace Entrega3_FyBuZz
                 }
 
             }
+            
         }
         private void CreateSongSongFileButton_Click(object sender, EventArgs e)
         {
@@ -6880,7 +6869,25 @@ namespace Entrega3_FyBuZz
         {
             SideMenuPanel.Width = 0;
             SideMenuPanel.Hide();
-            AdminMenuPanel.BringToFront();
+            List<string> listUser = OnLogInLogInButton_Clicked2(UserLogInTextBox.Text);
+            List<User> userDatabase = OnSearchUserButton_Click();
+            if (listUser[3] == "admin")
+            {
+                foreach (User user in userDatabase)
+                {
+                    if (user.Username != null)
+                    {
+                        AdminMenuAllUsers.Items.Add(user.Username);
+                    }
+                }
+                AdminMenuPanel.BringToFront();
+            }
+            else
+            {
+                DisplayStartCreateErrorTextBox.AppendText("You don't have permission to acces here");
+                Thread.Sleep(1500);
+                DisplayStartCreateErrorTextBox.Clear();
+            }
         }
 
         private void AboutFyBuZzButton_Click(object sender, EventArgs e)
@@ -6976,19 +6983,52 @@ namespace Entrega3_FyBuZz
         private void CreateSongsButton_Click(object sender, EventArgs e)
         {
             OcultarSubMenus();
-            CreateSongPanel.BringToFront();
+            Profile profile = OnProfilesChooseProfile_Click(ProfileName, UserLogInTextBox.Text, PasswordLogInTextBox.Text);
+            if(profile.ProfileType != "standard")
+            {
+                CreateSongPanel.BringToFront();
+            }
+            else
+            {
+                DisplayStartCreateErrorTextBox.AppendText("You don't have permission to create multimedia");
+                Thread.Sleep(1500);
+                DisplayStartCreateErrorTextBox.Clear();
+            }
+
         }
 
         private void CreateVideosButton_Click(object sender, EventArgs e)
         {
             OcultarSubMenus();
-            CreateVideoPanel.BringToFront();
+            Profile profile = OnProfilesChooseProfile_Click(ProfileName, UserLogInTextBox.Text, PasswordLogInTextBox.Text);
+            if (profile.ProfileType != "standard")
+            {
+                CreateVideoPanel.BringToFront();
+            }
+            else
+            {
+                DisplayStartCreateErrorTextBox.AppendText("You don't have permission to create multimedia");
+                Thread.Sleep(1500);
+                DisplayStartCreateErrorTextBox.Clear();
+            }
+            
         }
 
         private void CreatePlayListsButton_Click(object sender, EventArgs e)
         {
             OcultarSubMenus();
-            CreatePlaylistPanel.BringToFront();
+            Profile profile = OnProfilesChooseProfile_Click(ProfileName, UserLogInTextBox.Text, PasswordLogInTextBox.Text);
+            if (profile.ProfileType != "standard")
+            {
+                CreatePlaylistPanel.BringToFront();
+            }
+            else
+            {
+                DisplayStartCreateErrorTextBox.AppendText("You don't have permission to create multimedia");
+                Thread.Sleep(1500);
+                DisplayStartCreateErrorTextBox.Clear();
+            }
+            
         }
 
         private void CreateProfilesButton_Click(object sender, EventArgs e)
